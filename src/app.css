@@ -1,0 +1,214 @@
+@import url(./easings.css);
+
+.container {
+    padding-inline: 1rem;
+}
+
+section.block {
+    padding-block: var(--section-padding);
+}
+.section-title {
+    margin-bottom: 1.5rem !important;
+}
+.MuiButton-root {
+    text-transform: capitalize !important;
+}
+.MuiButton-sizeLarge {
+    font-size: 1.15rem !important;
+    padding: 0.75em 2em !important;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    font-weight: 300;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+    user-select: none;
+}
+
+.bg-secondary {
+    background-color: var(--clr-secondary);
+}
+
+
+.parallax {
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.parallax-image > img {
+    min-height: 100vh;
+    min-height: 100dvh;
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.site-hero {
+    display: grid;
+    position: relative;
+    isolation: isolate;
+    min-height: max(700px, 100vh);
+    min-height: max(700px, 100dvh);
+    align-items: center;
+    padding-block: 160px var(--section-padding);
+}
+.site-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--overlay-linear);
+    z-index: -1;
+}
+.site-hero > * {
+    grid-area: 1 / -1;
+}
+.site-hero .hero-object img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Site Hero */
+.site-hero .col-wrapper {
+    min-height: 300px;
+    background-color: hsl(0 0% 100% / 10%);
+    display: grid;
+    place-content: center;
+    color: var(--clr-white);
+    border: 1px solid #7a7a7a;
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+    animation: 1s colorChange linear infinite alternate both;
+    -webkit-animation: 1s colorChange linear infinite alternate both;
+}
+.site-hero .col-wrapper:hover {
+    border-color: var(--clr-white) !important;
+}
+.site-hero .col-wrapper h1 {
+    font-size: 5rem;
+}
+
+@keyframes colorChange {
+    to {
+        border-color: var(--clr-secondary);
+        color: var(--clr-secondary);
+    }
+}
+
+
+
+
+
+
+
+.live-results {
+    background-color: var(--clr-primary);
+    padding: 0.5rem;
+}
+
+
+
+
+
+.cta {
+    color: var(--clr-white);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+.cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--overlay-linear);
+}
+.cta .logo {
+    max-width: 180px;
+}
+
+
+.charts .MuiInputBase-formControl {
+    background-color: hsl(0 0% 100% / 10%);
+}
+
+
+
+
+::selection {
+    background-color: #302812;
+    color: var(--clr-white);
+}
+
+footer {
+    padding-block: 40px;
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+    text-align: center;
+}
+footer .container {
+    max-width: 768px;
+}
+footer h6 {
+    color: var(--clr-secondary);
+    margin-bottom: 1rem !important;
+}
+footer .logo {
+    margin-bottom: 1rem;
+    max-width: 200px;
+    margin-inline: auto;
+}
+footer p {
+    font-size: 14px !important;
+}
+
+.whatsapp-btn {
+    position: fixed !important;
+    inset: auto 1rem 1rem auto;
+    background-color: var(--clr-primary) !important;
+    animation: 1s linear blink alternate both infinite;
+    -webkit-animation: 1s linear blink alternate both infinite;
+}
+.whatsapp-btn svg {
+    color: var(--clr-white);
+    font-size: 2.5rem;
+}
+@keyframes blink {
+    to {
+        scale: 1.15;
+    }
+}
+
+@media (max-width: 450px) {
+    .chartbox .MuiFormControl-root {
+        flex: 100%;
+    }
+    .site-hero .hero-object img {
+        object-position: right;
+    }
+}

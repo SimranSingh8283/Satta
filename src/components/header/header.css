@@ -1,0 +1,49 @@
+#site-header {
+    box-shadow: none;
+    padding-bottom: 1rem;
+    background-color: transparent;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+}
+
+#site-header.scrolled {
+    box-shadow: 0 4px 16px hsl(0 0% 0% / 15%) !important;
+    background-color: hsl(0 0% 0% / 80%);
+    backdrop-filter: blur(8px);
+}
+
+.site-logo {
+    max-width: 250px;
+    display: block;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+}
+
+#site-header.scrolled .site-logo {
+    max-width: 200px;
+}
+
+.topbar {
+    background-color: #fdd663;
+    margin-bottom: 1rem;
+    padding: 0.35rem 1rem;
+}
+
+.topbar * {
+    margin: 0;
+}
+
+@media (max-width: 575px) {
+
+    .live-results h5 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+}
